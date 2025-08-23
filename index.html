@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rekber Big Mouth</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-size: 12px; /* ukuran teks kecil */
+    font-family: monospace, sans-serif;
+  }
+
+  /* Ukuran teks global */
+  .text-sm {
+    font-size: 12px;
+  }
+  .text-xs {
+    font-size: 10px;
+  }
+
+  /* Ukuran ikon lebih kecil */
+  .icon-sm {
+    font-size: 14px; /* atau pakai scale 0.8 */
+  }
+
+  /* Efek hover glow */
+  .glow:hover {
+    box-shadow: 0 0 10px rgba(255,255,0,0.6), 
+                0 0 20px rgba(255,255,0,0.3);
+    transform: translateY(-2px);
+    transition: all 0.2s ease-in-out;
+  }
+</style>
+</head>
+<body class="text-white bg-gradient-to-r from-[#ff512f] via-[#dd2476] via-[#24c6dc] to-[#514a9d]">
+  
+<!-- Navbar -->
+<header class="fixed w-full z-50 bg-black/30 backdrop-blur-xl border-b border-yellow-400/20">
+  <div class="container mx-auto flex justify-between items-center px-6 py-4">
+    
+    <!-- Brand -->
+    <h1 class="text-2xl font-extrabold tracking-widest text-yellow-300 drop-shadow-lg">
+      REKBER
+    </h1>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex space-x-8 text-lg font-medium">
+      <a href="#operational" class="hover:text-yellow-300 transition">Operational</a>
+      <a href="#payment" class="hover:text-yellow-300 transition">Payment</a>
+      <a href="#service" class="hover:text-yellow-300 transition">Service</a>
+      <a href="#faq" class="hover:text-yellow-300 transition">Questions</a>
+      <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden flex flex-col space-y-1.5 group">
+      <span class="w-7 h-0.5 bg-yellow-300 rounded-full group-hover:w-8 transition-all"></span>
+      <span class="w-7 h-0.5 bg-yellow-300 rounded-full group-hover:w-8 transition-all"></span>
+      <span class="w-7 h-0.5 bg-yellow-300 rounded-full group-hover:w-8 transition-all"></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="menu" class="hidden md:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-xl shadow-2xl">
+    <nav class="flex flex-col items-center py-6 space-y-6 text-lg">
+      <a href="#operational" class="hover:text-yellow-300 transition">Operational</a>
+      <a href="#payment" class="hover:text-yellow-300 transition">Payment</a>
+      <a href="#service" class="hover:text-yellow-300 transition">Service</a>
+      <a href="#faq" class="hover:text-yellow-300 transition">Questions</a>
+      <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Home -->
+<section id="home" class="h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+  <!-- Background dekorasi -->
+  <div class="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-600 to-blue-500 animate-pulse opacity-20"></div>
+  <div class="absolute w-96 h-96 bg-white/10 rounded-full blur-3xl top-10 left-10"></div>
+  <div class="absolute w-72 h-72 bg-white/10 rounded-full blur-2xl bottom-10 right-10"></div>
+
+  <!-- Konten utama -->
+  <div class="relative z-10">
+    <!-- Logo rekber -->
+    <div class="flex justify-center mb-6">
+      <div class="bg-white/10 p-6 rounded-2xl shadow-xl glow">
+        <i class="fas fa-shield-alt text-6xl text-yellow-400"></i>
+      </div>
+    </div>
+
+    <!-- Judul -->
+    <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight drop-shadow-lg" data-aos="fade-up">
+      BIG MOUTH 
+    </h1>
+
+    <!-- Subjudul -->
+    <p class="max-w-2xl mx-auto text-lg md:text-xl text-white/90 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+      Solusi transaksi online <span class="font-bold text-yellow-300">aman</span> dan <span class="font-bold text-yellow-300">terpercaya</span>.  
+      Kami hadir sebagai pihak ketiga yang menjamin keamanan dana Anda.
+    </p>
+
+    <!-- Tombol CTA -->
+    <div class="mt-8 flex justify-center gap-6" data-aos="zoom-in" data-aos-delay="400">
+      <a href="#operational" class="bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-full font-bold shadow-xl transition transform hover:scale-105 glow">
+        Mulai Sekarang
+      </a>
+      <a href="#contact" class="bg-white/10 hover:bg-white/20 px-6 py-3 rounded-full font-bold shadow-xl backdrop-blur-lg transition transform hover:scale-105 glow">
+        Hubungi Kami
+      </a>
+    </div>
+
+    <!-- Sosial Media -->
+    <div class="mt-10 flex gap-6 justify-center" data-aos="fade-up" data-aos-delay="600">
+      <a href="#" class="text-3xl hover:text-green-400 transition"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" class="text-3xl hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-3xl hover:text-blue-400 transition"><i class="fab fa-telegram"></i></a>
+      <a href="#" class="text-3xl hover:text-yellow-400 transition"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="operational" class="py-20 container mx-auto px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-8 text-white">Operational Rekber</h2>
+    <p class="text-white/90 mb-12 max-w-3xl mx-auto">
+      Rekber Big Mouth adalah layanan rekening bersama untuk menjembatani pembeli dan penjual agar transaksi berjalan aman, transparan, dan bebas penipuan.
+    </p>
+
+<!-- Statistik Transaksi -->
+<div class="space-y-6 max-w-xl mx-auto mb-12">
+  <!-- Keamanan -->
+  <div>
+    <div class="flex justify-between mb-2 text-white">
+      <span class="font-medium">Keamanan</span>
+      <span class="font-medium">85%</span>
+    </div>
+    <div class="w-full bg-gray-700 rounded-lg h-4">
+      <div class="bg-yellow-400 h-4 rounded-lg" style="width: 85%"></div>
+    </div>
+  </div>
+
+  <!-- Kecepatan -->
+  <div>
+    <div class="flex justify-between mb-2 text-white">
+      <span class="font-medium">Kecepatan</span>
+      <span class="font-medium">70%</span>
+    </div>
+    <div class="w-full bg-gray-700 rounded-lg h-4">
+      <div class="bg-yellow-400 h-4 rounded-lg" style="width: 70%"></div>
+    </div>
+  </div>
+
+  <!-- Customer Satisfaction -->
+  <div>
+    <div class="flex justify-between mb-2 text-white">
+      <span class="font-medium">Kepuasan</span>
+      <span class="font-medium">95%</span>
+    </div>
+    <div class="w-full bg-gray-700 rounded-lg h-4">
+      <div class="bg-yellow-400 h-4 rounded-lg" style="width: 95%"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Proses Transaksi Cards -->
+<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+  <!-- Card Template -->
+  <div class="glow bg-white/20 backdrop-blur-md p-4 rounded-xl shadow-lg text-center border border-white/30">
+    <i class="fas fa-shopping-cart text-2xl mb-3 text-white"></i>
+    <h4 class="text-lg font-bold mb-1 text-white">Pembeli Order</h4>
+    <p class="text-white/80 text-sm">Pembeli memilih barang/jasa yang ingin dibeli.</p>
+  </div>
+
+  <div class="glow bg-white/20 backdrop-blur-md p-4 rounded-xl shadow-lg text-center border border-white/30">
+    <i class="fas fa-money-check-alt text-2xl mb-3 text-white"></i>
+    <h4 class="text-lg font-bold mb-1 text-white">Bayar ke Rekber</h4>
+    <p class="text-white/80 text-sm">Pembeli transfer dana ke Rekber Big Mouth untuk diamankan.</p>
+  </div>
+
+  <div class="glow bg-white/20 backdrop-blur-md p-4 rounded-xl shadow-lg text-center border border-white/30">
+    <i class="fas fa-shield-alt text-2xl mb-3 text-white"></i>
+    <h4 class="text-lg font-bold mb-1 text-white">Konfirmasi Dana</h4>
+    <p class="text-white/80 text-sm">Rekber memverifikasi dan memberi tahu penjual bahwa dana sudah masuk.</p>
+  </div>
+
+  <div class="glow bg-white/20 backdrop-blur-md p-4 rounded-xl shadow-lg text-center border border-white/30">
+    <i class="fas fa-truck text-2xl mb-3 text-white"></i>
+    <h4 class="text-lg font-bold mb-1 text-white">Penjual Kirim Barang</h4>
+    <p class="text-white/80 text-sm">Penjual mengirim barang/jasa sesuai kesepakatan.</p>
+  </div>
+
+  <div class="glow bg-white/20 backdrop-blur-md p-4 rounded-xl shadow-lg text-center border border-white/30">
+    <i class="fas fa-box-open text-2xl mb-3 text-white"></i>
+    <h4 class="text-lg font-bold mb-1 text-white">Pembeli Konfirmasi</h4>
+    <p class="text-white/80 text-sm">Pembeli menerima barang/jasa lalu melakukan konfirmasi.</p>
+  </div>
+
+  <div class="glow bg-white/20 backdrop-blur-md p-4 rounded-xl shadow-lg text-center border border-white/30">
+    <i class="fas fa-hand-holding-usd text-2xl mb-3 text-white"></i>
+    <h4 class="text-lg font-bold mb-1 text-white">Dana Diteruskan</h4>
+    <p class="text-white/80 text-sm">Rekber melepas dana ke penjual, transaksi selesai dengan aman.</p>
+  </div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Payment -->
+<section id="payment" class="py-20 container mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeInDown">Payment Methods</h2>
+  <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+    
+    <!-- 1 -->
+    <div class="bg-black/40 p-6 rounded-xl animate__animated animate__zoomIn glow">
+      <i class="fas fa-wallet text-3xl"></i>
+      <p class="mt-2">OVO</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-black/40 p-6 rounded-xl animate__animated animate__zoomIn animate__delay-1s glow">
+      <i class="fas fa-wallet text-3xl"></i>
+      <p class="mt-2">Dana</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-black/40 p-6 rounded-xl animate__animated animate__zoomIn animate__delay-2s glow">
+      <i class="fas fa-wallet text-3xl"></i>
+      <p class="mt-2">GoPay</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-black/40 p-6 rounded-xl animate__animated animate__zoomIn animate__delay-3s glow">
+      <i class="fas fa-qrcode text-3xl"></i>
+      <p class="mt-2">QRIS</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="bg-black/40 p-6 rounded-xl animate__animated animate__zoomIn animate__delay-4s glow">
+      <i class="fas fa-credit-card text-3xl"></i>
+      <p class="mt-2">Kartu Kredit</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="bg-black/40 p-6 rounded-xl animate__animated animate__zoomIn animate__delay-5s glow">
+      <i class="fas fa-university text-3xl"></i>
+      <p class="mt-2">Rekening Bank</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Service -->
+<section id="service" class="py-20 container mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeInDown">
+    Our Services
+  </h2>
+  <div class="container mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
+
+    <!-- 1 -->
+    <div class="bg-white/10 p-6 rounded-xl animate__animated animate__fadeInUp glow text-center">
+      <i class="fas fa-shopping-cart text-4xl text-yellow-400 mb-4"></i>
+      <h3 class="font-bold text-xl mb-2">Rekber Jual Beli</h3>
+      <p>Transaksi barang/jasa dengan aman.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="bg-white/10 p-6 rounded-xl animate__animated animate__fadeInUp animate__delay-1s glow text-center">
+      <i class="fas fa-credit-card text-4xl text-yellow-400 mb-4"></i>
+      <h3 class="font-bold text-xl mb-2">Rekber Digital</h3>
+      <p>Pembelian akun, voucher, game item.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="bg-white/10 p-6 rounded-xl animate__animated animate__fadeInUp animate__delay-2s glow text-center">
+      <i class="fas fa-project-diagram text-4xl text-yellow-400 mb-4"></i>
+      <h3 class="font-bold text-xl mb-2">Rekber Project</h3>
+      <p>Kerjasama bisnis dengan sistem milestone.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="bg-white/10 p-6 rounded-xl animate__animated animate__fadeInUp animate__delay-3s glow text-center">
+      <i class="fas fa-user-tie text-4xl text-yellow-400 mb-4"></i>
+      <h3 class="font-bold text-xl mb-2">Rekber Freelance</h3>
+      <p>Pembayaran aman untuk jasa desain, coding, writing, dll.</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="bg-white/10 p-6 rounded-xl animate__animated animate__fadeInUp animate__delay-4s glow text-center">
+      <i class="fas fa-piggy-bank text-4xl text-yellow-400 mb-4"></i>
+      <h3 class="font-bold text-xl mb-2">Rekber Investasi</h3>
+      <p>Penitipan dana untuk proyek & kerjasama investasi.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="bg-white/10 p-6 rounded-xl animate__animated animate__fadeInUp animate__delay-5s glow text-center">
+      <i class="fas fa-cogs text-4xl text-yellow-400 mb-4"></i>
+      <h3 class="font-bold text-xl mb-2">Rekber Custom</h3>
+      <p>Layanan rekber sesuai kebutuhan khusus Anda.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="py-20 container mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeInDown">
+    Asked Questions
+  </h2>
+  <div class="space-y-4 max-w-3xl mx-auto">
+
+    <!-- Item 1 -->
+    <div class="bg-black/40 p-4 rounded-xl animate__animated animate__fadeInLeft glow">
+      <button class="w-full flex justify-between items-center font-bold focus:outline-none toggle-faq">
+        <span>Apakah Rekber Big Mouth terpercaya?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-content hidden mt-2 text-sm">
+        <p>Ya, kami sudah melayani ribuan transaksi dengan feedback positif.</p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="bg-black/40 p-4 rounded-xl animate__animated animate__fadeInRight glow">
+      <button class="w-full flex justify-between items-center font-bold focus:outline-none toggle-faq">
+        <span>Bagaimana cara menggunakan layanan Rekber?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-content hidden mt-2 text-sm">
+        <p>Cukup daftar akun, pilih layanan, dan ikuti instruksi transaksi di platform kami.</p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="bg-black/40 p-4 rounded-xl animate__animated animate__fadeInLeft glow">
+      <button class="w-full flex justify-between items-center font-bold focus:outline-none toggle-faq">
+        <span>Apakah ada biaya tambahan?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-content hidden mt-2 text-sm">
+        <p>Biaya layanan sudah tercantum di setiap layanan, tanpa biaya tersembunyi.</p>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="bg-black/40 p-4 rounded-xl animate__animated animate__fadeInRight glow">
+      <button class="w-full flex justify-between items-center font-bold focus:outline-none toggle-faq">
+        <span>Adakah proteksi untuk penjual dan pembeli?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-content hidden mt-2 text-sm">
+        <p>Ya, sistem Rekber menjaga keamanan transaksi hingga kedua pihak selesai sesuai kesepakatan.</p>
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="bg-black/40 p-4 rounded-xl animate__animated animate__fadeInLeft glow">
+      <button class="w-full flex justify-between items-center font-bold focus:outline-none toggle-faq">
+        <span>Bagaimana cara menghubungi customer support?</span>
+        <i class="fas fa-chevron-down"></i>
+      </button>
+      <div class="faq-content hidden mt-2 text-sm">
+        <p>Anda bisa menghubungi kami melalui chat di website, email, atau media sosial resmi kami.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-20 container mx-auto px-6">
+  <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeInDown">
+    Get In Touch
+  </h2>
+
+  <!-- Contact Cards -->
+  <div class="flex flex-col md:flex-row justify-center gap-6 max-w-4xl mx-auto mb-12">
+    
+    <!-- Card 1: Lokasi -->
+    <div class="bg-black/40 p-6 rounded-xl flex-1 text-center animate__animated animate__fadeInLeft glow">
+      <i class="fas fa-map-marker-alt text-2xl mb-2"></i>
+      <h3 class="font-bold mb-2">Lokasi</h3>
+      <p>South Celebes, Indonesia.</p>
+    </div>
+
+    <!-- Card 2: Email -->
+    <div class="bg-black/40 p-6 rounded-xl flex-1 text-center animate__animated animate__fadeInUp glow">
+      <i class="fas fa-envelope text-2xl mb-2"></i>
+      <h3 class="font-bold mb-2">Email</h3>
+      <p>support@rekberbigmouth.com</p>
+    </div>
+
+    <!-- Card 3: Telepon -->
+    <div class="bg-black/40 p-6 rounded-xl flex-1 text-center animate__animated animate__fadeInRight glow">
+      <i class="fas fa-phone text-2xl mb-2"></i>
+      <h3 class="font-bold mb-2">Telepon</h3>
+      <p>+62 812-3456-7890</p>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="py-20 text-center container mx-auto px-6">
+    <p>© 2025 Rekber Big Mouth • All Rights Reserved.</p>
+  </footer>
+  
+<!-- Script -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  const btn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+    menu.classList.toggle('animate__animated');
+    menu.classList.toggle('animate__fadeInDown');
+  });
+</script>
+<script>
+  document.querySelectorAll(".toggle-faq").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector("i");
+      content.classList.toggle("hidden");
+      icon.classList.toggle("fa-chevron-down");
+      icon.classList.toggle("fa-chevron-up");
+    });
+  });
+</script>
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+  .animate-slide {
+    animation: slide 20s linear infinite;
+  }
+</style>
+</body>
+</html>
