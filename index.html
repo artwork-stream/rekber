@@ -3,10 +3,51 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Rekber Seantero</title>
+  <title>Rekber Seantero - Jasa Rekening Bersama Aman & Terpercaya</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="Rekber Seantero menyediakan jasa rekening bersama aman, cepat, dan terpercaya untuk transaksi online tanpa khawatir penipuan.">
+  <meta name="keywords" content="rekber, rekening bersama, rekber aman, rekber terpercaya, jasa rekber, rekber seantero, transaksi online aman">
+  <meta name="author" content="Rekber Seantero">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Rekber Seantero - Rekening Bersama Aman & Terpercaya">
+  <meta property="og:description" content="Gunakan jasa Rekber Seantero untuk transaksi online yang aman dan nyaman.">
+  <meta property="og:image" content="https://artwork-stream.github.io/rekber.png">
+  <meta property="og:url" content="https://artwork-stream.github.io/rekber">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rekber Seantero - Rekening Bersama Aman & Terpercaya">
+  <meta name="twitter:description" content="Jasa rekening bersama terpercaya untuk transaksi online aman.">
+  <meta name="twitter:image" content="https://artwork-stream.github.io/rekber.png">
+  
+  <!-- Favicon Default -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Apple Touch Icon (iPhone/iPad) -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+  <!-- Android/Chrome -->
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+
+  <!-- Windows Tile (PWA/Edge/Windows 10) -->
+  <meta name="msapplication-TileColor" content="#0f172a"> 
+  <meta name="msapplication-TileImage" content="/mstile-150x150.png">
+
+  <!-- Theme Color untuk Browser Mobile -->
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
 <style>
   html {
     scroll-behavior: smooth;
@@ -54,11 +95,17 @@
     scrollbar-width: none;
   }
 </style>
+<!-- Google AdSense Auto Ads -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+crossorigin="anonymous">
+</script>
 </head>
 <body class="text-white bg-gradient-to-r from-[#ff512f] via-[#dd2476] via-[#24c6dc] to-[#514a9d]">
   
 <!-- Navbar -->
-<header class="fixed w-full z-50 bg-black/30 backdrop-blur-xl border-b border-yellow-400/20">
+<header class="fixed w-full z-50 text-white 
+               bg-gradient-to-r from-[#ff512f] via-[#dd2476] via-[#24c6dc] to-[#514a9d] 
+               bg-opacity-70 backdrop-blur-xl border-b border-white/20 shadow-lg">
   <div class="container mx-auto flex justify-between items-center px-6 py-4">
     
     <!-- Brand -->
@@ -66,7 +113,7 @@
       REKBER
     </h1>
 
-    <!-- Menu -->
+    <!-- Menu Desktop -->
     <nav class="hidden md:flex space-x-8 text-lg font-medium">
       <a href="#operational" class="hover:text-yellow-300 transition">Operational</a>
       <a href="#payment" class="hover:text-yellow-300 transition">Payment</a>
@@ -74,6 +121,23 @@
       <a href="#faq" class="hover:text-yellow-300 transition">Questions</a>
       <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
     </nav>
+
+    <!-- Tombol Hamburger (Mobile Only) -->
+    <button id="menu-btn" class="md:hidden text-yellow-300 text-3xl focus:outline-none">
+      ☰
+    </button>
+  </div>
+
+  <!-- Menu Mobile -->
+  <nav id="menu-mobile" class="hidden md:hidden flex flex-col space-y-4 
+                              bg-gradient-to-r from-[#ff512f] via-[#dd2476] via-[#24c6dc] to-[#514a9d] 
+                              bg-opacity-90 backdrop-blur-2xl px-6 py-4 text-lg font-medium shadow-lg">
+    <a href="#operational" class="hover:text-yellow-300 transition">Operational</a>
+    <a href="#payment" class="hover:text-yellow-300 transition">Payment</a>
+    <a href="#service" class="hover:text-yellow-300 transition">Service</a>
+    <a href="#faq" class="hover:text-yellow-300 transition">Questions</a>
+    <a href="#contact" class="hover:text-yellow-300 transition">Contact</a>
+  </nav>
 </header>
 
 <!-- Home -->
@@ -86,9 +150,12 @@
   <!-- Konten utama -->
   <div class="relative z-10">
     <!-- Logo rekber -->
-    <div class="flex justify-center mb-6">
+    <div class="flex justify-center gap-6 mb-6">
       <div class="bg-white/10 p-6 rounded-2xl shadow-xl glow">
-        <i class="fas fa-shield-alt text-6xl text-yellow-400"></i>
+        <img src="https://i.ibb.co.com/ZpVdykth/rekber.png" 
+             alt="© 2020 •Rekber Seantero"
+             class="w-24 h-24 object-contain rounded-xl border-4 border-yellow-400 shadow-lg"
+             onerror="this.onerror=null;this.outerHTML='<i class=\'fas fa-shield-alt text-yellow-400 text-6xl\'></i>'">
       </div>
     </div>
 
@@ -105,10 +172,10 @@
 
     <!-- Tombol CTA -->
     <div class="mt-8 flex justify-center gap-6" data-aos="zoom-in" data-aos-delay="400">
-      <a href="#operational" class="px-6 py-3 rounded-lg bg-yellow-600 hover:bg-yellow-500 font-semibold transition-all duration-300 glow">
+      <a href="#operational" class="px-6 py-3 rounded-lg bg-yellow-600 hover:bg-yellow-500 font-semibold transition-all duration-300 glow relative z-20">
         Operational 
       </a>
-      <a href="#contact" class="px-6 py-3 rounded-lg bg-yellow-600 hover:bg-yellow-500 font-semibold transition-all duration-300 glow">
+      <a href="#contact" class="px-6 py-3 rounded-lg bg-yellow-600 hover:bg-yellow-500 font-semibold transition-all duration-300 glow relative z-20">
         Rekber Now
       </a>
     </div>
@@ -210,6 +277,19 @@
 </div>
 </section>
 
+<!-- Iklan 1 -->
+<div class="container mx-auto px-6 my-10">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="3333333333"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
 <!-- Payment -->
 <section id="payment" class="py-20 container mx-auto px-6">
   <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeInDown">Payment Methods</h2>
@@ -253,6 +333,19 @@
 
   </div>
 </section>
+
+<!-- Iklan 2 -->
+<div class="container mx-auto px-6 my-10">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="1111111111"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
 
 <!-- Service -->
 <section id="service" class="py-20 container mx-auto px-6">
@@ -305,6 +398,19 @@
 
   </div>
 </section>
+
+<!-- Iklan 3 -->
+<div class="container mx-auto px-6 my-10">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="2222222222"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
 
 <!-- FAQ -->
 <section id="faq" class="py-20 container mx-auto px-6">
@@ -371,6 +477,19 @@
   </div>
 </section>
 
+<!-- Iklan 4 -->
+<div class="container mx-auto px-6 my-10">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="3333333333"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
 <!-- Contact -->
 <section id="contact" class="py-20 container mx-auto px-6">
   <h2 class="text-3xl font-bold text-center mb-12 animate__animated animate__fadeInDown">
@@ -384,21 +503,21 @@
     <div class="bg-black/40 p-6 rounded-xl flex-1 text-center animate__animated animate__fadeInLeft glow">
       <i class="fas fa-map-marker-alt text-2xl mb-2"></i>
       <h3 class="font-bold mb-2">Lokasi</h3>
-      <p>South Celebes, Indonesia.</p>
+      <p>Eastern Indonesia</p>
     </div>
 
     <!-- Card 2: Email -->
     <div class="bg-black/40 p-6 rounded-xl flex-1 text-center animate__animated animate__fadeInUp glow">
       <i class="fas fa-envelope text-2xl mb-2"></i>
       <h3 class="font-bold mb-2">Email</h3>
-      <p>support@rekberseantero.com</p>
+      <p>seantero@support.com</p>
     </div>
 
     <!-- Card 3: Telepon -->
     <div class="bg-black/40 p-6 rounded-xl flex-1 text-center animate__animated animate__fadeInRight glow">
       <i class="fas fa-phone text-2xl mb-2"></i>
       <h3 class="font-bold mb-2">Telepon</h3>
-      <p>+62 812-1945-1915</p>
+      <p>+62 812-1945-1708</p>
     </div>
   </div>
 
@@ -419,8 +538,8 @@
       <!-- Pilih Jasa Rekber -->
       <div>
         <label for="jasa" class="block mb-1 font-semibold">Pilih Jasa Rekber</label>
-        <select id="jasa" name="jasa" class="w-full p-3 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
-          <option value="" disabled selected>Pilih jasa</option>
+        <select id="jasa" name="jasa" autocomplate="off" class="w-full p-3 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
+          <option value="disabled selected">Pilih jasa</option>
           <option value="BigMouth">BigMouth</option>
           <option value="SafePay">SafePay</option>
           <option value="TrustedEscrow">TrustedEscrow</option>
@@ -432,12 +551,12 @@
       <div>
         <label for="payment" class="block mb-1 font-semibold">Metode Pembayaran</label>
         <select id="payment" name="payment" class="w-full p-3 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>
-          <option value="" disabled selected>Pilih metode pembayaran</option>
+          <option value="disabled selected">Pilih metode pembayaran</option>
           <option value="Bank Transfer">Bank Transfer</option>
           <option value="GOPAY">GOPAY</option>
           <option value="OVO">OVO</option>
           <option value="DANA">DANA</option>
-          <option value="DANA">QRIS</option>
+          <option value="QRIS">QRIS</option>
         </select>
       </div>
 
@@ -457,6 +576,19 @@
   </div>
 </section>
 
+<!-- Iklan 5 -->
+<div class="container mx-auto px-6 my-10">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="3333333333"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+
   <!-- Footer -->
   <footer class="py-20 text-center container mx-auto px-6">
     <p>© 2020 Artwork-Stream • All Rights Reserved.</p>
@@ -464,6 +596,38 @@
   
 <!-- Script -->
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Rekber Seantero",
+  "url": "https://artwork-stream.github.io/rekber",
+  "logo": "https://artwork-stream.github.io/favicon-512x512.png",
+  "sameAs": [
+    "https://www.facebook.com/rekberseantero",
+    "https://www.instagram.com/rekberseantero"
+  ]
+}
+</script>
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menuMobile = document.getElementById('menu-mobile');
+
+  menuBtn.addEventListener('click', () => {
+    menuMobile.classList.toggle('hidden');
+  });
+
+  document.querySelectorAll(".toggle-faq").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector("i");
+      content.classList.toggle("hidden");
+      icon.classList.toggle("fa-chevron-down");
+      icon.classList.toggle("fa-chevron-up");
+    });
+  });
+</script>
 <script>
 const form = document.getElementById('form-rekber');
 const nama = document.getElementById('nama');
@@ -496,17 +660,6 @@ form.addEventListener('submit', e => {
   const waNumber = '+15555555555'; // Ganti nomor tujuan
   window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(waMessage)}`, '_blank');
 });
-</script>
-<script>
-  document.querySelectorAll(".toggle-faq").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const content = btn.nextElementSibling;
-      const icon = btn.querySelector("i");
-      content.classList.toggle("hidden");
-      icon.classList.toggle("fa-chevron-down");
-      icon.classList.toggle("fa-chevron-up");
-    });
-  });
 </script>
 </body>
 </html>
